@@ -14,8 +14,8 @@
     <nav class="flex justify-between bg-green-100 p-3 items-center shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
@@ -35,10 +35,31 @@
         </ul>
     </nav>
 
+    <!--Side Nav bar-->
+
+    <nav id="sideNav" class="bg-green-100 w-1/2 h-screen fixed z-20 top-0 -right-1/2 transition-all duration-1000">
+        <div class="text-right p-5">
+            <p id="closeNav" class="inline cursor-pointer">X</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+
     <!-- Heading section -->
     <section class="text-center mt-3">
         <h1 class="font-bold text-3xl">Our products</h1>
-        <input type="text" placeholder="search for a product..." class="border border-black w-4/6 p-2 rounded-2xl mt-3">
+        <input id="search" type="text" placeholder="search for a product..." class="border border-black w-4/6 p-2 rounded-2xl mt-3">
     </section>
 
     <!-- Best seller section 1 -->
@@ -46,18 +67,18 @@
     <section class="p-4 text-center">
 
 
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+        <div id="productContainer" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
                 <img src="Best seller_1.png" alt="flowerpot"
                     class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg">
-                <h1>Rose Plant</h1>
+                <h1>Rose pot</h1>
                 <P>20$</P>
             </div>
 
             <div>
                 <img src="Best seller_2.png" alt="flowerpot"
                     class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg">
-                <h1>Rose Plant</h1>
+                <h1>Tropical flower</h1>
                 <P>20$</P>
             </div>
 
@@ -72,7 +93,7 @@
             <div>
                 <img src="Best seller_4.png" alt="flowerpot"
                     class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg">
-                <h1>Rose Plant</h1>
+                <h1>Giant flowerpot</h1>
                 <P>20$</P>
             </div>
 
@@ -89,14 +110,14 @@
             <div>
                 <img src="Best seller_1.png" alt="flowerpot"
                     class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg">
-                <h1>Rose Plant</h1>
+                <h1>Lily pot</h1>
                 <P>20$</P>
             </div>
 
             <div>
                 <img src="Best seller_2.png" alt="flowerpot"
                     class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg">
-                <h1>Rose Plant</h1>
+                <h1>Lily plant</h1>
                 <P>20$</P>
             </div>
 
@@ -104,14 +125,14 @@
             <div>
                 <img src="Best seller_3.png" alt="flowerpot"
                     class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg">
-                <h1>Rose Plant</h1>
+                <h1>Flower pot</h1>
                 <P>20$</P>
             </div>
 
             <div>
                 <img src="Best seller_4.png" alt="flowerpot"
                     class="inline hover:shadow-xl transform hover:-translate-y-2 rounded-lg">
-                <h1>Rose Plant</h1>
+                <h1>Blue flower</h1>
                 <P>20$</P>
             </div>
 
@@ -127,3 +148,9 @@
         </p>
         <p class="p-2">&copy; 2021 Greenday.com</p>
     </section>
+
+    <script src="product.js"></script>
+
+</body>
+
+</html>
